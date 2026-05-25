@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Ethiopia | Premium Flower Delivery in Addis Ababa & Beyond</title>
+    <meta name="description" content="Premium flower delivery in Addis Ababa, Dire Dawa, Hawassa & major Ethiopian cities. Birthday, wedding, funeral & holiday bouquets. Pay with Telebirr, Chapa or Cash on Delivery.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        rose: { 50: '#fff1f2', 100: '#ffe4e6', 500: '#f43f5e', 600: '#e11d48', 700: '#be123c' },
+                        emerald: { 600: '#059669', 700: '#047857' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, rgba(190,18,60,0.85) 0%, rgba(5,150,105,0.8) 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .occasion-card { position: relative; overflow: hidden; }
+        .occasion-card img { transition: transform 0.5s ease; }
+        .occasion-card:hover img { transform: scale(1.1); }
+        .payment-badge { transition: all 0.2s; }
+        .payment-badge:hover { transform: scale(1.05); }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+        .float-anim { animation: float 3s ease-in-out infinite; }
+        .scroll-reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+<!-- TOP BAR -->
+<div class="bg-rose-700 text-white text-sm py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1"><i class="fas fa-phone-alt text-xs"></i> 0966 211 851</span>
+            <span class="hidden sm:inline">|</span>
+            <span class="flex items-center gap-1"><i class="fas fa-envelope text-xs"></i> abenezergirma730@gmail.com</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="bg-white/20 px-2 py-0.5 rounded text-xs">Free Delivery in Addis Ababa</span>
+            <span class="bg-emerald-600 px-2 py-0.5 rounded text-xs">Same-Day Available</span>
+        </div>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="sticky top-0 z-50 bg-white border-b border-gray-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-rose-600 rounded-full flex items-center justify-center text-white"><i class="fas fa-spa text-lg"></i></div>
+                <div>
+                    <h1 class="font-serif text-xl font-bold text-rose-700 leading-tight">Bloom Ethiopia</h1>
+                    <p class="text-[10px] text-gray-500 -mt-1 tracking-widest uppercase">Premium Florist</p>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#occasions" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">Occasions</a>
+                <a href="#collection" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">Collection</a>
+                <a href="#delivery" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">Delivery Zones</a>
+                <a href="#reviews" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">FAQ</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="tel:0966211851" class="hidden sm:flex items-center gap-2 text-rose-600 font-semibold text-sm hover:bg-rose-50 px-3 py-2 rounded-lg transition"><i class="fas fa-phone-alt"></i> Call Now</a>
+                <a href="#order" class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-lg hover:shadow-xl">Order Online</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+        <div class="px-4 py-3 space-y-2">
+            <a href="#occasions" class="block py-2 text-gray-700 font-medium">Occasions</a>
+            <a href="#collection" class="block py-2 text-gray-700 font-medium">Collection</a>
+            <a href="#delivery" class="block py-2 text-gray-700 font-medium">Delivery Zones</a>
+            <a href="#reviews" class="block py-2 text-gray-700 font-medium">Reviews</a>
+            <a href="#order" class="block py-2 text-rose-600 font-bold">Order Now</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=1920&q=80" alt="Beautiful flower bouquet" class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm mb-6">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                Delivering in Addis Ababa, Dire Dawa, Hawassa & More
+            </div>
+            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                Fresh Flowers,<br>Delivered with <span class="text-yellow-300">Love</span>
+            </h1>
+            <p class="text-xl text-white/90 mb-8 leading-relaxed max-w-lg">
+                Ethiopia's trusted florist for birthdays, weddings, funerals, and every special moment. Handcrafted bouquets with same-day delivery.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#order" class="bg-white text-rose-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl text-center">
+                    <i class="fas fa-shopping-bag mr-2"></i>Order Online Now
+                </a>
+                <a href="https://wa.me/251966211851" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-xl text-center flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i>Chat on WhatsApp
+                </a>
+            </div>
+            <div class="mt-12 flex flex-wrap gap-6 text-white/80 text-sm">
+                <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Telebirr & Chapa Accepted</span></div>
+                <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Cash on Delivery</span></div>
+                <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>500+ Happy Customers</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-10 right-10 hidden lg:block float-anim">
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-white border border-white/20">
+            <div class="flex items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4f44d5d0?w=100&q=80" class="w-12 h-12 rounded-lg object-cover">
+                <div>
+                    <p class="text-xs opacity-80">Just Delivered</p>
+                    <p class="font-semibold text-sm">Wedding Bouquet to Bole</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAYMENT METHODS BAR -->
+<section class="bg-gray-50 py-6 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-10">
+            <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Pay With:</span>
+            <div class="payment-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200">
+                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold">T</div>
+                <span class="font-semibold text-gray-700">Telebirr</span>
+            </div>
+            <div class="payment-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200">
+                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">C</div>
+                <span class="font-semibold text-gray-700">Chapa</span>
+            </div>
+            <div class="payment-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200">
+                <i class="fas fa-money-bill-wave text-green-600 text-lg"></i>
+                <span class="font-semibold text-gray-700">Cash on Delivery</span>
+            </div>
+            <div class="payment-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200">
+                <i class="fas fa-university text-gray-600 text-lg"></i>
+                <span class="font-semibold text-gray-700">Bank Transfer</span>
+            </div>
+            <div class="payment-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200">
+                <i class="fab fa-whatsapp text-green-500 text-lg"></i>
+                <span class="font-semibold text-gray-700">WhatsApp Order</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OCCASIONS SECTION -->
+<section id="occasions" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 scroll-reveal">
+            <span class="text-rose-600 font-semibold text-sm uppercase tracking-widest">What We Offer</span>
+            <h2 class="font-serif text-4xl font-bold text-gray-900 mt-2">Flowers for Every Occasion</h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">From joyful celebrations to solemn moments, we craft the perfect arrangement for every Ethiopian occasion and holiday.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="occasion-card rounded-2xl overflow-hidden shadow-lg card-hover group cursor-pointer scroll-reveal" onclick="selectOccasion('Birthday')">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=600&q=80" alt="Birthday flowers" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <div class="flex items-center gap-2 mb-2"><span class="bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">Popular</span></div>
+                        <h3 class="text-white font-serif text-2xl font-bold">Birthdays</h3>
+                        <p class="text-white/80 text-sm mt-1">Colorful bouquets & gift combos from 850 ETB</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Same-day delivery available</span>
+                        <span class="text-rose-600 font-semibold text-sm group-hover:translate-x-1 transition">Order Now &rarr;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="occasion-card rounded-2xl overflow-hidden shadow-lg card-hover group cursor-pointer scroll-reveal" onclick="selectOccasion('Wedding')">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding flowers" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="text-white font-serif text-2xl font-bold">Weddings</h3>
+                        <p class="text-white/80 text-sm mt-1">Bridal bouquets, venue decor & arch flowers</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Custom packages available</span>
+                        <span class="text-rose-600 font-semibold text-sm group-hover:translate-x-1 transition">Inquire &rarr;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="occasion-card rounded-2xl overflow-hidden shadow-lg card-hover group cursor-pointer scroll-reveal" onclick="selectOccasion('Anniversary')">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600&q=80" alt="Anniversary roses" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="text-white font-serif text-2xl font-bold">Anniversaries</h3>
+                        <p class="text-white/80 text-sm mt-1">Red roses, premium arrangements & chocolates</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Romantic add-ons included</span>
+                        <span class="text-rose-600 font-semibold text-sm group-hover:translate-x-1 transition">Order Now &rarr;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="occasion-card rounded-2xl overflow-hidden shadow-lg card-hover group cursor-pointer scroll-reveal" onclick="selectOccasion('Funeral / Memorial')">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=600&q=80" alt="Funeral wreath" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="text-white font-serif text-2xl font-bold">Funerals & Memorials</h3>
+                        <p class="text-white/80 text-sm mt-1">Respectful wreaths, standing sprays & sympathy baskets</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Dignified & timely delivery</span>
+                        <span class="text-rose-600 font-semibold text-sm group-hover:translate-x-1 transition">Order Now &rarr;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="occasion-card rounded-2xl overflow-hidden shadow-lg card-hover group cursor-pointer scroll-reveal" onclick="selectOccasion('Valentine\'s Day')">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600&q=80" alt="Valentine flowers" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <div class="flex items-center gap-2 mb-2"><span class="bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded">Seasonal</span></div>
+                        <h3 class="text-white font-serif text-2xl font-bold">Valentine's Day</h3>
+                        <p class="text-white/80 text-sm mt-1">Limited edition rose boxes & heart-shaped arrangements</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Pre-order for best prices</span>
+                        <span class="text-rose-600 font-semibold text-sm group-hover:translate-x-1 transition">Pre-Order &rarr;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="occasion-card rounded-2xl overflow-hidden shadow-lg card-hover group cursor-pointer scroll-reveal" onclick="selectOccasion('Ethiopian Holiday (Enkutatash)')">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=600&q=80" alt="Ethiopian holiday flowers" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <div class="flex items-center gap-2 mb-2"><span class="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded">Local</span></div>
+                        <h3 class="text-white font-serif text-2xl font-bold">Ethiopian Holidays</h3>
+                        <p class="text-white/80 text-sm mt-1">Enkutatash, Meskel, Timkat & Easter specials</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Cultural arrangements</span>
+                        <span class="text-rose-600 font-semibold text-sm group-hover:translate-x-1 transition">View Specials &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED COLLECTION -->
+<section id="collection" class="py-20 bg-rose-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 scroll-reveal">
+            <span class="text-rose-600 font-semibold text-sm uppercase tracking-widest">Best Sellers</span>
+            <h2 class="font-serif text-4xl font-bold text-gray-900 mt-2">Our Featured Collection</h2>
+            <p class="text-gray-600 mt-4">Handpicked favorites loved by our Ethiopian customers</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover scroll-reveal">
+                <div class="relative h-56">
+                    <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500&q=80" alt="Red Rose Bouquet" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 bg-rose-600 text-white text-xs font-bold px-2 py-1 rounded">Bestseller</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-serif text-lg font-bold text-gray-900">Classic Red Roses</h3>
+                    <p class="text-gray-500 text-sm mt-1">12 stems, hand-tied with ribbon</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-2xl font-bold text-rose-600">1,200 <span class="text-sm font-normal text-gray-500">ETB</span></span>
+                        <button onclick="addToOrder('Classic Red Roses', 1200)" class="bg-rose-600 hover:bg-rose-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover scroll-reveal">
+                <div class="relative h-56">
+                    <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=500&q=80" alt="Mixed Seasonal" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded">Value</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-serif text-lg font-bold text-gray-900">Mixed Seasonal Box</h3>
+                    <p class="text-gray-500 text-sm mt-1">Local & imported seasonal mix</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-2xl font-bold text-rose-600">850 <span class="text-sm font-normal text-gray-500">ETB</span></span>
+                        <button onclick="addToOrder('Mixed Seasonal Box', 850)" class="bg-rose-600 hover:bg-rose-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover scroll-reveal">
+                <div class="relative h-56">
+                    <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=500&q=80" alt="Luxury Orchids" class="w-full h-full object-cover">
+                </div>
+                <div class="p-5">
+                    <h3 class="font-serif text-lg font-bold text-gray-900">Luxury Orchid Arrangement</h3>
+                    <p class="text-gray-500 text-sm mt-1">Premium phalaenopsis in ceramic pot</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-2xl font-bold text-rose-600">2,500 <span class="text-sm font-normal text-gray-500">ETB</span></span>
+                        <button onclick="addToOrder('Luxury Orchid Arrangement', 2500)" class="bg-rose-600 hover:bg-rose-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover scroll-reveal">
+                <div class="relative h-56">
+                    <img src="https://images.unsplash.com/photo-1462275646964-a0e3f2c69c9b?w=500&q=80" alt="White Funeral Wreath" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 bg-gray-600 text-white text-xs font-bold px-2 py-1 rounded">Sympathy</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-serif text-lg font-bold text-gray-900">White Peace Wreath</h3>
+                    <p class="text-gray-500 text-sm mt-1">Elegant sympathy arrangement</p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-2xl font-bold text-rose-600">1,800 <span class="text-sm font-normal text-gray-500">ETB</span></span>
+                        <button onclick="addToOrder('White Peace Wreath', 1800)" class="bg-rose-600 hover:bg-rose-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="#order" class="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-full font-semibold transition shadow-lg">
+                View Full Catalog & Order <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- DELIVERY ZONES -->
+<section id="delivery" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="scroll-reveal">
+                <span class="text-rose-600 font-semibold text-sm uppercase tracking-widest">Coverage</span>
+                <h2 class="font-serif text-4xl font-bold text-gray-900 mt-2">Delivery Zones in Ethiopia</h2>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    We deliver fresh flowers across Addis Ababa with same-day service, and to major regional cities with next-day delivery. Every bouquet is carefully packaged to arrive in perfect condition.
+                </p>
+                <div class="mt-8 space-y-4">
+                    <div class="flex items-start gap-4 p-4 bg-green-50 rounded-xl border border-green-100">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white shrink-0"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Addis Ababa - Same Day</h4>
+                            <p class="text-gray-600 text-sm mt-1">Bole, Arat Kilo, Piassa, Kazanchis, Megenagna, Sarbet, Ayat, CMC, Summit, and all sub-cities. Order by 4 PM.</p>
+                            <span class="inline-block mt-2 bg-green-600 text-white text-xs px-2 py-1 rounded font-semibold">Free Delivery</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shrink-0"><i class="fas fa-truck"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Major Cities - Next Day</h4>
+                            <p class="text-gray-600 text-sm mt-1">Dire Dawa, Hawassa, Adama (Nazret), Bahir Dar, Mekelle, Jimma, Dessie. Delivery fee: 200-400 ETB.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-yellow-50 rounded-xl border border-yellow-100">
+                        <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center text-white shrink-0"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Other Locations - Call Us</h4>
+                            <p class="text-gray-600 text-sm mt-1">For towns not listed, call <a href="tel:0966211851" class="text-rose-600 font-semibold">0966 211 851</a> and we will arrange special logistics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-reveal">
+                <div class="bg-gray-900 rounded-2xl p-6 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-rose-600 rounded-full blur-3xl opacity-20"></div>
+                    <h3 class="font-serif text-2xl font-bold mb-6">Delivery Schedule</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-700">
+                            <div class="flex items-center gap-3"><i class="fas fa-calendar-day text-rose-400"></i><span>Monday - Saturday</span></div>
+                            <span class="font-semibold">8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-700">
+                            <div class="flex items-center gap-3"><i class="fas fa-sun text-yellow-400"></i><span>Sunday</span></div>
+                            <span class="font-semibold">9:00 AM - 3:00 PM</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-700">
+                            <div class="flex items-center gap-3"><i class="fas fa-gift text-green-400"></i><span>Holidays (Enkutatash, Meskel, etc.)</span></div>
+                            <span class="font-semibold text-yellow-400">Special Hours</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-white/10 rounded-xl p-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-info-circle text-blue-400 text-xl"></i>
+                            <p class="text-sm text-gray-300">Funeral and emergency orders accepted outside regular hours. Call us anytime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-20 bg-rose-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 scroll-reveal">
+            <h2 class="font-serif text-4xl font-bold">How to Order</h2>
+            <p class="text-rose-100 mt-4">Four simple steps to send flowers anywhere in Ethiopia</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center scroll-reveal">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 backdrop-blur-sm"><i class="fas fa-mouse-pointer"></i></div>
+                <h3 class="font-bold text-xl mb-2">1. Choose</h3>
+                <p class="text-rose-100 text-sm">Pick your bouquet, occasion, and add a personalized message card.</p>
+            </div>
+            <div class="text-center scroll-reveal">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 backdrop-blur-sm"><i class="fas fa-map-marker-alt"></i></div>
+                <h3 class="font-bold text-xl mb-2">2. Enter Details</h3>
+                <p class="text-rose-100 text-sm">Provide recipient address, phone number, and preferred delivery time.</p>
+            </div>
+            <div class="text-center scroll-reveal">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 backdrop-blur-sm"><i class="fas fa-mobile-alt"></i></div>
+                <h3 class="font-bold text-xl mb-2">3. Pay</h3>
+                <p class="text-rose-100 text-sm">Pay via Telebirr, Chapa, bank transfer, or choose cash on delivery.</p>
+            </div>
+            <div class="text-center scroll-reveal">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 backdrop-blur-sm"><i class="fas fa-heart"></i></div>
+                <h3 class="font-bold text-xl mb-2">4. We Deliver</h3>
+                <p class="text-rose-100 text-sm">Fresh flowers hand-delivered with care. You will get a confirmation photo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ORDER FORM SECTION -->
+<section id="order" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12">
+            <!-- Form -->
+            <div class="lg:col-span-3 scroll-reveal">
+                <span class="text-rose-600 font-semibold text-sm uppercase tracking-widest">Order Now</span>
+                <h2 class="font-serif text-4xl font-bold text-gray-900 mt-2">Send Flowers Today</h2>
+                <p class="text-gray-600 mt-4 mb-8">Fill out the form below and we will confirm your order within 30 minutes during business hours.</p>
+
+                <!-- Web3Form -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 space-y-6">
+                    <input type="hidden" name="access_key" value="de9aaa53-9d49-4977-996b-29a00ed3028c">
+                    <input type="hidden" name="subject" value="New Flower Order - Bloom Ethiopia">
+                    <input type="hidden" name="from_name" value="Bloom Ethiopia Website">
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Your Full Name *</label>
+                            <input type="text" name="customer_name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="Abebe Kebede">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Your Phone *</label>
+                            <input type="tel" name="customer_phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="0911 234 567">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Your Email</label>
+                        <input type="email" name="customer_email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="you@example.com">
+                    </div>
+
+                    <div class="border-t border-gray-100 pt-6">
+                        <h3 class="font-semibold text-gray-900 mb-4 flex items-center gap-2"><i class="fas fa-gift text-rose-500"></i> Recipient Details</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Recipient Name *</label>
+                                <input type="text" name="recipient_name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="Name of person receiving flowers">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Recipient Phone *</label>
+                                <input type="tel" name="recipient_phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="09XX XXX XXX">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Delivery Address *</label>
+                        <textarea name="delivery_address" required rows="2" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="Kebele, Street name, Building, House No. - Addis Ababa, Bole"></textarea>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">City / Zone *</label>
+                            <select name="city" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition bg-white">
+                                <option value="">Select City</option>
+                                <option value="Addis Ababa - Bole">Addis Ababa - Bole</option>
+                                <option value="Addis Ababa - Arat Kilo">Addis Ababa - Arat Kilo</option>
+                                <option value="Addis Ababa - Piassa">Addis Ababa - Piassa</option>
+                                <option value="Addis Ababa - Kazanchis">Addis Ababa - Kazanchis</option>
+                                <option value="Addis Ababa - Megenagna">Addis Ababa - Megenagna</option>
+                                <option value="Addis Ababa - Sarbet">Addis Ababa - Sarbet</option>
+                                <option value="Addis Ababa - Ayat">Addis Ababa - Ayat</option>
+                                <option value="Addis Ababa - CMC">Addis Ababa - CMC</option>
+                                <option value="Addis Ababa - Summit">Addis Ababa - Summit</option>
+                                <option value="Addis Ababa - Other">Addis Ababa - Other</option>
+                                <option value="Dire Dawa">Dire Dawa</option>
+                                <option value="Hawassa">Hawassa</option>
+                                <option value="Adama (Nazret)">Adama (Nazret)</option>
+                                <option value="Bahir Dar">Bahir Dar</option>
+                                <option value="Mekelle">Mekelle</option>
+                                <option value="Jimma">Jimma</option>
+                                <option value="Dessie">Dessie</option>
+                                <option value="Other">Other (specify in notes)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred Delivery Date *</label>
+                            <input type="date" name="delivery_date" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition">
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-100 pt-6">
+                        <h3 class="font-semibold text-gray-900 mb-4 flex items-center gap-2"><i class="fas fa-shopping-bag text-rose-500"></i> Order Details</h3>
+                        <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Occasion *</label>
+                                <select name="occasion" required id="occasion-select" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition bg-white">
+                                    <option value="">Select Occasion</option>
+                                    <option value="Birthday">Birthday</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Anniversary">Anniversary</option>
+                                    <option value="Funeral / Memorial">Funeral / Memorial</option>
+                                    <option value="Valentine's Day">Valentine's Day</option>
+                                    <option value="Ethiopian Holiday (Enkutatash)">Enkutatash (New Year)</option>
+                                    <option value="Ethiopian Holiday (Meskel)">Meskel (Demera)</option>
+                                    <option value="Ethiopian Holiday (Timkat)">Timkat</option>
+                                    <option value="Ethiopian Holiday (Easter)">Fasika (Easter)</option>
+                                    <option value="Just Because">Just Because</option>
+                                    <option value="Corporate">Corporate / Office</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Budget Range (ETB)</label>
+                                <select name="budget" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition bg-white">
+                                    <option value="">Select Budget</option>
+                                    <option value="500-1000">500 - 1,000 ETB</option>
+                                    <option value="1000-2000">1,000 - 2,000 ETB</option>
+                                    <option value="2000-5000">2,000 - 5,000 ETB</option>
+                                    <option value="5000+">5,000+ ETB (Premium)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Flower Preference / Specific Request</label>
+                            <textarea name="flower_request" rows="2" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="e.g., Red roses, white lilies, mixed seasonal... Or describe what you want"></textarea>
+                        </div>
+                        <div class="mt-4">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Message Card (Free)</label>
+                            <textarea name="message_card" rows="2" maxlength="200" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition" placeholder="Write your personal message here (max 200 characters)"></textarea>
+                            <p class="text-xs text-gray-500 mt-1">We will hand-write this on a beautiful card.</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-100 pt-6">
+                        <h3 class="font-semibold text-gray-900 mb-4 flex items-center gap-2"><i class="fas fa-credit-card text-rose-500"></i> Payment Method</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="payment_method" value="Telebirr" class="peer sr-only" checked>
+                                <div class="border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-rose-600 peer-checked:bg-rose-50 transition">
+                                    <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold mx-auto mb-2">T</div>
+                                    <span class="text-sm font-semibold">Telebirr</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="payment_method" value="Chapa" class="peer sr-only">
+                                <div class="border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-rose-600 peer-checked:bg-rose-50 transition">
+                                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold mx-auto mb-2">C</div>
+                                    <span class="text-sm font-semibold">Chapa</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="payment_method" value="Cash on Delivery" class="peer sr-only">
+                                <div class="border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-rose-600 peer-checked:bg-rose-50 transition">
+                                    <i class="fas fa-money-bill-wave text-green-600 text-2xl mb-2"></i>
+                                    <span class="text-sm font-semibold block">Cash on Delivery</span>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="payment_method" value="Bank Transfer" class="peer sr-only">
+                                <div class="border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-rose-600 peer-checked:bg-rose-50 transition">
+                                    <i class="fas fa-university text-gray-600 text-2xl mb-2"></i>
+                                    <span class="text-sm font-semibold block">Bank Transfer</span>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">For Telebirr/Chapa: We will send payment details after confirming your order. For COD: Pay when flowers are delivered.</p>
+                    </div>
+
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold text-lg py-4 rounded-xl transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Submit Order Request
+                        </button>
+                        <p class="text-center text-sm text-gray-500 mt-3">We will call you within 30 minutes to confirm availability and final price.</p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="lg:col-span-2 space-y-6 scroll-reveal">
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-4">Prefer to Call or Chat?</h3>
+                    <div class="space-y-3">
+                        <a href="tel:0966211851" class="flex items-center gap-3 p-3 bg-rose-50 rounded-xl hover:bg-rose-100 transition">
+                            <div class="w-10 h-10 bg-rose-600 rounded-full flex items-center justify-center text-white"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <p class="font-semibold text-gray-900">0966 211 851</p>
+                                <p class="text-xs text-gray-500">Call or SMS anytime</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/251966211851" target="_blank" class="flex items-center gap-3 p-3 bg-green-50 rounded-xl hover:bg-green-100 transition">
+                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <p class="font-semibold text-gray-900">WhatsApp Order</p>
+                                <p class="text-xs text-gray-500">Fastest response time</p>
+                            </div>
+                        </a>
+                        <a href="mailto:abenezergirma730@gmail.com" class="flex items-center gap-3 p-3 bg-blue-50 rounded-xl hover:bg-blue-100 transition">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <p class="font-semibold text-gray-900">abenezergirma730@gmail.com</p>
+                                <p class="text-xs text-gray-500">For corporate inquiries</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 text-white rounded-2xl shadow-lg p-6">
+                    <h3 class="font-serif text-xl font-bold mb-4">Why Choose Bloom Ethiopia?</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-400 mt-0.5"></i><span>Fresh flowers sourced daily from local growers and importers</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-400 mt-0.5"></i><span>Same-day delivery across all Addis Ababa sub-cities</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-400 mt-0.5"></i><span>Pay with Telebirr, Chapa, or cash on delivery</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-400 mt-0.5"></i><span>Photo confirmation sent after every delivery</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-400 mt-0.5"></i><span>Free message card with every order</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-400 mt-0.5"></i><span>Funeral orders prioritized with respectful handling</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-6 border border-yellow-200">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fas fa-calendar-star text-orange-500"></i>
+                        <h3 class="font-bold text-gray-900">Upcoming Seasonal Demand</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Major Ethiopian holidays and Valentine's Day see high demand. Pre-order early for guaranteed availability and better prices.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white px-3 py-1 rounded-full text-xs font-semibold text-orange-700 border border-orange-200">Enkutatash (Sept)</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-xs font-semibold text-orange-700 border border-orange-200">Meskel (Sept)</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-700 border border-rose-200">Valentine's (Feb)</span>
+                        <span class="bg-white px-3 py-1 rounded-full text-xs font-semibold text-purple-700 border border-purple-200">Fasika (Apr)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 scroll-reveal">
+            <span class="text-rose-600 font-semibold text-sm uppercase tracking-widest">Testimonials</span>
+            <h2 class="font-serif text-4xl font-bold text-gray-900 mt-2">What Our Customers Say</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-2xl p-6 scroll-reveal">
+                <div class="flex text-yellow-400 text-sm mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-700 italic mb-4">"Ordered a birthday bouquet for my mom in Bole. Delivered within 3 hours and the flowers were incredibly fresh. The Telebirr payment was super easy too!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-rose-200 rounded-full flex items-center justify-center text-rose-700 font-bold">H</div>
+                    <div>
+                        <p class="font-semibold text-gray-900 text-sm">Hanna T.</p>
+                        <p class="text-xs text-gray-500">Addis Ababa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-6 scroll-reveal">
+                <div class="flex text-yellow-400 text-sm mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-700 italic mb-4">"Used Bloom Ethiopia for our wedding venue decoration. They understood exactly what we wanted for our traditional Ethiopian ceremony. Highly professional!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-emerald-200 rounded-full flex items-center justify-center text-emerald-700 font-bold">D</div>
+                    <div>
+                        <p class="font-semibold text-gray-900 text-sm">Dawit & Selam</p>
+                        <p class="text-xs text-gray-500">Wedding - Addis Ababa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-6 scroll-reveal">
+                <div class="flex text-yellow-400 text-sm mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-gray-700 italic mb-4">"I live abroad and wanted to send flowers to my family in Dire Dawa for Enkutatash. They handled the next-day delivery perfectly and sent me a photo. Thank you!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-700 font-bold">A</div>
+                    <div>
+                        <p class="font-semibold text-gray-900 text-sm">Amanuel K.</p>
+                        <p class="text-xs text-gray-500">Diaspora - USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="py-20 bg-rose-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 scroll-reveal">
+            <span class="text-rose-600 font-semibold text-sm uppercase tracking-widest">Help Center</span>
+            <h2 class="font-serif text-4xl font-bold text-gray-900 mt-2">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-4 scroll-reveal">
+            <details class="bg-white rounded-xl shadow-sm group">
+                <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-gray-900 list-none">
+                    <span>Which areas in Addis Ababa do you deliver to?</span>
+                    <i class="fas fa-chevron-down text-rose-500 transition group-open:rotate-180"></i>
+                </summary>
+                <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                    We deliver to all 11 sub-cities of Addis Ababa including Bole, Arada (Arat Kilo/Piassa), Kirkos (Kazanchis), Yeka (Megenagna/Ayat), Nifas Silk (Sarbet/Summit), CMC, Kolfe, Lideta, Akaky Kaliti, and more. Same-day delivery is free for all Addis Ababa orders.
+                </div>
+            </details>
+            <details class="bg-white rounded-xl shadow-sm group">
+                <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-gray-900 list-none">
+                    <span>How do I pay with Telebirr or Chapa?</span>
+                    <i class="fas fa-chevron-down text-rose-500 transition group-open:rotate-180"></i>
+                </summary>
+                <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                    After you submit your order, we will call you to confirm availability and total price. Then we will send you a payment request via Telebirr or provide a Chapa payment link. You can also choose Cash on Delivery and pay when the flowers arrive.
+                </div>
+            </details>
+            <details class="bg-white rounded-xl shadow-sm group">
+                <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-gray-900 list-none">
+                    <span>Can I send flowers to someone in another city like Hawassa or Dire Dawa?</span>
+                    <i class="fas fa-chevron-down text-rose-500 transition group-open:rotate-180"></i>
+                </summary>
+                <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                    Yes! We deliver to Dire Dawa, Hawassa, Adama (Nazret), Bahir Dar, Mekelle, Jimma, and Dessie with next-day delivery. For other towns, please call us at 0966 211 851 and we will arrange special logistics.
+                </div>
+            </details>
+            <details class="bg-white rounded-xl shadow-sm group">
+                <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-gray-900 list-none">
+                    <span>What if I need flowers for a funeral urgently?</span>
+                    <i class="fas fa-chevron-down text-rose-500 transition group-open:rotate-180"></i>
+                </summary>
+                <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                    Funeral and memorial orders are our highest priority. We accept urgent orders outside regular hours for these occasions. Call 0966 211 851 directly - we answer funeral inquiries 24/7 and prioritize respectful, timely delivery.
+                </div>
+            </details>
+            <details class="bg-white rounded-xl shadow-sm group">
+                <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-gray-900 list-none">
+                    <span>Do you offer flowers for Ethiopian holidays like Enkutatash and Meskel?</span>
+                    <i class="fas fa-chevron-down text-rose-500 transition group-open:rotate-180"></i>
+                </summary>
+                <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                    Absolutely! We create special arrangements for Enkutatash (Ethiopian New Year), Meskel (Demera), Timkat, and Fasika (Easter). These are our busiest seasons, so we recommend pre-ordering at least 3-5 days in advance to guarantee availability.
+                </div>
+            </details>
+            <details class="bg-white rounded-xl shadow-sm group">
+                <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold text-gray-900 list-none">
+                    <span>Can I customize my bouquet?</span>
+                    <i class="fas fa-chevron-down text-rose-500 transition group-open:rotate-180"></i>
+                </summary>
+                <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                    Yes! Use the "Flower Preference" field in the order form to describe what you want, or call/WhatsApp us at 0966 211 851. We can customize colors, flower types, sizes, and add extras like chocolates, balloons, or teddy bears.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-10 h-10 bg-rose-600 rounded-full flex items-center justify-center text-white"><i class="fas fa-spa text-lg"></i></div>
+                    <div><h3 class="font-serif text-xl font-bold">Bloom Ethiopia</h3></div>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Ethiopia's premier florist delivering fresh, handcrafted flower arrangements for every occasion. Based in Addis Ababa, serving all major Ethiopian cities.
+                </p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-rose-600 rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-rose-600 rounded-full flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-rose-600 rounded-full flex items-center justify-center transition"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#occasions" class="hover:text-white transition">Occasions</a></li>
+                    <li><a href="#collection" class="hover:text-white transition">Flower Collection</a></li>
+                    <li><a href="#delivery" class="hover:text-white transition">Delivery Zones</a></li>
+                    <li><a href="#order" class="hover:text-white transition">Place an Order</a></li>
+                    <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Occasions</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#occasions" class="hover:text-white transition">Birthday Flowers</a></li>
+                    <li><a href="#occasions" class="hover:text-white transition">Wedding Flowers</a></li>
+                    <li><a href="#occasions" class="hover:text-white transition">Funeral & Sympathy</a></li>
+                    <li><a href="#occasions" class="hover:text-white transition">Valentine's Day</a></li>
+                    <li><a href="#occasions" class="hover:text-white transition">Ethiopian Holidays</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li class="flex items-center gap-2"><i class="fas fa-phone-alt text-rose-500"></i><a href="tel:0966211851" class="hover:text-white transition">0966 211 851</a></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-envelope text-rose-500"></i><a href="mailto:abenezergirma730@gmail.com" class="hover:text-white transition">abenezergirma730@gmail.com</a></li>
+                    <li class="flex items-center gap-2"><i class="fab fa-whatsapp text-green-500"></i><a href="https://wa.me/251966211851" target="_blank" class="hover:text-white transition">WhatsApp: 0966 211 851</a></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-rose-500"></i><span>Addis Ababa, Ethiopia</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-sm"> Bloom Ethiopia. All rights reserved.</p>
+            <div class="flex gap-4 text-gray-500 text-sm">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Scroll reveal animation
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.getElementById('mobile-menu').classList.add('hidden');
+            }
+        });
+    });
+
+    // Select occasion from cards
+    function selectOccasion(occasion) {
+        const select = document.getElementById('occasion-select');
+        if (select) {
+            select.value = occasion;
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Add to order helper
+    function addToOrder(product, price) {
+        const select = document.getElementById('occasion-select');
+        if (select) {
+            select.value = 'Just Because';
+        }
+        const requestField = document.querySelector('textarea[name="flower_request"]');
+        if (requestField) {
+            requestField.value = 'I want: ' + product + ' (' + price + ' ETB)';
+        }
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Set minimum date to today
+    document.addEventListener('DOMContentLoaded', function() {
+        const dateInput = document.querySelector('input[name="delivery_date"]');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+    });
+</script>
+
+</body>
+</html>
